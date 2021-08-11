@@ -1,6 +1,7 @@
 package com.baufest.store.shopping.entity;
 
 import com.baufest.store.shopping.entity.InvoiceItem;
+import com.baufest.store.shopping.model.Customer;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
@@ -38,6 +39,9 @@ public class Invoice implements Serializable {
     private List<InvoiceItem> items;
 
     private String state;
+
+    @Transient
+    private Customer customer;
 
     public Invoice() {
         items = new ArrayList<>();
