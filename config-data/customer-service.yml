@@ -9,17 +9,6 @@ server:
 # http://localhost:8092/h2-console
 # Enabling H2 Console
 spring:
-  application:
-    name: customer-service
-  cloud:
-    config:
-      uri: http://localhost:8081
-      username: root
-      password: s3cr3t
-  boot:
-    admin:
-      client:
-        url: http://localhost:8086
   h2:
     console:
       enabled: true
