@@ -2,7 +2,9 @@ package com.baufest.store.shopping.client;
 
 import com.baufest.store.shopping.model.Customer;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CustomerHystrixFallbackFactory implements CustomerClient{
     @Override
     public ResponseEntity<Customer> getCustomer(long id) {
